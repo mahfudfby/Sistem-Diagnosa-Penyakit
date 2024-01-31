@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\admin",
+    "\\resources\\views\\admin\\riwayat",
+    "\\resources\\views\\admin\\roles",
+    "\\resources\\views\\admin\\rules",
+    "\\resources\\views\\auth",
+    "\\resources\\views\\components",
+    "\\resources\\views\\layouts"
+  ],
+  "SelectedNode": "\\resources\\views\\admin\\diagnosa.blade.php",
+  "PreviewInSolutionExplorer": false
+}

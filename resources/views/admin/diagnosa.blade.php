@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="title">
-        Diagnosa penyakit
+        Gejala Apa Saja Yang Terjadi
     </x-slot>
 
     <x-slot name="head">
@@ -30,9 +30,9 @@
                     <input type="text" class="form-control mb-3 w-50" name="nama">
                     @endrole
 
-                    <p>Pilih gejala yang sedang dirasakan.</p>
+                    <p>Pilih Gejala yang terjadi.</p>
 
-                    <label for=""><b><i class="fas fa-th mr-1"></i> Gejala-gejala</b></label>
+                    <label for=""><b><i class="fas fa-th mr-1"></i> Daftar Gejala</b></label>
                     @foreach($gejala as $key => $value)
                         @php 
                         $mod = ($key + 1) % 2;
@@ -48,15 +48,15 @@
                                 </div>
                                 <div>
                                     <select name="diagnosa[]" id="" class="form-control form-control-sm red-border">
-                                        <option value="{{ $value->id }}+-1">Pasti tidak</option>
-                                        <option value="{{ $value->id }}+-0.8">Hampir pasti tidak</option>
-                                        <option value="{{ $value->id }}+-0.6">Kemungkinan besar tidak</option>
+                                        <option value="{{ $value->id }}+-1">tidak sama sekali terjadi</option>
+                                        <option value="{{ $value->id }}+-0.8">Hampir</option>
+                                        <option value="{{ $value->id }}+-0.6">Sepertinya tidak terjadi</option>
                                         <option value="{{ $value->id }}+-0.4">Mungkin tidak</option>
-                                        <option value="" selected>Tidak tahu</option>
-                                        <option value="{{ $value->id }}+0.4">Mungkin</option>
-                                        <option value="{{ $value->id }}+0.6">Sangat mungkin</option>
+                                        <option value="" selected>Tidak Tahu</option>
+                                        <option value="{{ $value->id }}+0.4">Mungkin Terjadi</option>
+                                        <option value="{{ $value->id }}+0.6">Hampir mungkin</option>
                                         <option value="{{ $value->id }}+0.8">Hampir pasti</option>
-                                        <option value="{{ $value->id }}+1">Pasti</option>
+                                        <option value="{{ $value->id }}+1">PASTI</option>
                                     </select>
                                 </div>
                             </div>

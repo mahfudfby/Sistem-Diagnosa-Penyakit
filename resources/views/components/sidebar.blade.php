@@ -3,13 +3,13 @@
         <div class="sidebar-brand-icon">
             <img src="{{ asset((setting('logo')) ? '/storage/'.setting('logo') : 'dist/img/logo/logo2.png') }}">
         </div>
-        <div class="sidebar-brand-text mx-3">SIDAPM</div>
+        <div class="sidebar-brand-text mx-3">PETANI NGANJUK</div>
     </a>
     <hr class="sidebar-divider my-0">
 
     @can('dashboard')
     <x-nav-link 
-        text="Dashboard" 
+        text="MENU UTAMA" 
         icon="th" 
         url="{{ route('admin.dashboard') }}"
         active="{{ request()->routeIs('admin.dashboard') ? ' active' : '' }}"
@@ -20,7 +20,7 @@
     
     @can('diagnosa')    
     <x-nav-link 
-        text="Diagnosa" 
+        text="Diagnosis" 
         icon="stethoscope" 
         url="{{ route('admin.diagnosa') }}"
         active="{{ request()->routeIs('admin.diagnosa') ? ' active' : '' }}"
@@ -29,7 +29,7 @@
     
     @can('riwayat-list')
     <x-nav-link 
-        text="Riwayat Diagnosa" 
+        text="Riwayat Diagnosis" 
         icon="notes-medical" 
         url="{{ route('admin.riwayat.daftar') }}"
         active="{{ request()->routeIs('admin.riwayat.daftar') ? ' active' : '' }}"
@@ -40,7 +40,7 @@
     <hr class="sidebar-divider mt-3 mb-0">
     
     <x-nav-link 
-        text="Daftar User" 
+        text="Daftar Pengguna" 
         icon="users" 
         url="{{ route('admin.member') }}"
         active="{{ request()->routeIs('admin.member') ? ' active' : '' }}"

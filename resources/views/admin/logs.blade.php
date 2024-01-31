@@ -1,16 +1,16 @@
 <x-app-layout>
-	<x-slot name="title">Activity Log</x-slot>
+	<x-slot name="title">Activitas</x-slot>
 
 	@if(session()->has('success'))
 	<x-alert type="danger" message="{{ session()->get('success') }}" />
 	@endif
 
 	<x-card>
-		<x-slot name="title">All Activity Log</x-slot>
+		<x-slot name="title">Semua Activitas</x-slot>
 		<x-slot name="option">
 			<form action="{{ route('admin.logs.delete') }}" method="post">
 				@csrf
-				<button type="submit" class="btn btn-danger">Delete 7 days ago</button>
+				<button type="submit" class="btn btn-danger">Hapus Data</button>
 			</form>
 		</x-slot>
 

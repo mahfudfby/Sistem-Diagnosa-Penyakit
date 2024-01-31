@@ -1,23 +1,23 @@
 <x-app-layout>
     <x-slot name="title">
-        Dashboard
+        Menu Utama
     </x-slot>
 
     <section class="row">
         <x-card-sum 
-            text="Total User" 
+            text="Jumlah Pengguna" 
             value="{{ App\Models\User::count() }}" 
             icon="users" 
             color="success"
         />
         <x-card-sum 
-            text="Total Diagnosa" 
+            text="Daftar Diagnosa" 
             value="{{ App\Models\Riwayat::count() }}" 
             icon="stethoscope" 
             color="primary"
         />
         <x-card-sum 
-            text="Daftar Penyakit" 
+            text="Jenis Penyakit" 
             value="{{ App\Models\Penyakit::count() }}" 
             icon="th-list" 
             color="warning"
@@ -35,10 +35,10 @@
         <div class="col-md-6">
             <x-card>
                 <x-slot name="title">
-                    Log Activity
+                    Daftar Riwayat
                 </x-slot>
                 <x-slot name="option">
-                    <a href="{{ route('admin.logs') }}" class="btn btn-primary btn-sm">More</a>
+                    <a href="{{ route('admin.logs') }}" class="btn btn-primary btn-sm">Selengkapnya</a>
                 </x-slot>
                 <table class="table">
                     <tbody>
